@@ -20,7 +20,7 @@ $(<./deploy.yaml)
 EOF
 " | kubectl apply -f -
 
-echo '-- kubectl get services --'
-kubectl get services | grep ${kubernetes_name}
-echo '-- kubectl get pods --'
-kubectl get pods | grep ${kubernetes_name}
+echo ' kubectl get services --namespace ${namespace_name} '
+kubectl get services --namespace ${namespace_name}
+echo ' kubectl get pods --namespace ${namespace_name} '
+kubectl get pods --namespace ${namespace_name}
