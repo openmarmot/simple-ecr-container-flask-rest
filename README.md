@@ -1,7 +1,7 @@
 # simple-ecr-container-flask-rest
 Simple Docker container hosting a flask webserver with a REST API 
 
-This is a simple Flask website that can recieve and display messages through a REST API
+This is a simple Flask website that can receive and display messages through a REST API
 I needed this to test something else, so I threw it up here.
 
 Note - CORS is optional but useful if you are trying to display the data on another website
