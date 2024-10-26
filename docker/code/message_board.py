@@ -4,7 +4,8 @@
 #python message_board.py
 
 
-from flask import Flask, request, jsonify, render_template_string, escape
+from flask import Flask, request, jsonify, render_template_string
+from markupsafe import escape
 from flask_cors import CORS
 from datetime import datetime
 
