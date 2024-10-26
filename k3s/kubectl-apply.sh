@@ -7,9 +7,9 @@
 set -e
 
 # -- variables --
-#aws account number
 aws_account="$(aws sts get-caller-identity --query Account --output text)"
 aws_region="us-west-2"
+namespace_name="messageboard"
 container_name="messageboard"
 kubernetes_name="messageboard"
 read -p "Enter the container tag: " container_tag

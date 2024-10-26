@@ -8,10 +8,20 @@
 # describe service to get the nodeport (easier to let kubernetes pick it)
 
 
+# Namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${namespace_name} # Replace with your desired namespace name
+
+---
+
+# Service
 apiVersion: v1
 kind: Service
 metadata:
   name: ${kubernetes_name}-service
+  namespace: ${namespace_name} 
 spec:
   selector:
     app: ${kubernetes_name}
@@ -23,10 +33,12 @@ spec:
 
 ---
 
+# Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ${kubernetes_name}-deployment
+  namespace: ${namespace_name} 
   labels:
     app: ${kubernetes_name}
 spec:
