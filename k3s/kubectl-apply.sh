@@ -28,7 +28,5 @@ $(<./deploy.yaml)
 EOF
 " | kubectl apply -f -
 
-echo  "kubectl get services --namespace ${namespace_name}"
-kubectl get services --namespace ${namespace_name}
-echo "kubectl get pods --namespace ${namespace_name}"
-kubectl get pods --namespace ${namespace_name}
+echo  "kubectl get all --namespace ${namespace_name}"
+kubectl get all --namespace ${namespace_name}
