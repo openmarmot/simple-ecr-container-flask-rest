@@ -8,14 +8,7 @@
 # describe service to get the nodeport (easier to let kubernetes pick it)
 
 
-# Namespace
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ${namespace_name} # Replace with your desired namespace name
-
 ---
-
 # Service
 apiVersion: v1
 kind: Service
@@ -57,4 +50,4 @@ spec:
         imagePullPolicy: Always
         ports:
       imagePullSecrets:
-      - name: us-west-2-ecr-registry
+      - name: ${image_pull_secret_name}
