@@ -10,7 +10,7 @@
 
 # -- variables --
 aws_account="$(aws sts get-caller-identity --query Account --output text)"
-aws_region="us-west-2"
+aws_region="$(aws configure get region)"
 namespace_name="messageboard"
 container_name="messageboard"
 kubernetes_name="messageboard"
