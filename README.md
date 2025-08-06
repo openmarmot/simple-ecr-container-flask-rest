@@ -15,4 +15,5 @@ Note - CORS is optional but useful if you are trying to display the data on anot
 - run build_and_push_to_ecr.sh to build the docker container and push it to ECR
 
 ### Kubernetes Deploy
-- k3s/kubectl-apply.sh is a simple deployment aimed at a k3s host. It expects the amazon ecr setup i document in my tech-notes repo
+- k3s/kubectl-apply.sh is a simple deployment aimed at a k3s host.
+- It is designed to work with a K3s server deployed with this template [k3s with aws ecr](https://github.com/openmarmot/ansible-stuff/blob/main/fedora-k3s-with-aws-ecr.yml)

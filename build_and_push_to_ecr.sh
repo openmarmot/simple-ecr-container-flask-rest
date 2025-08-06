@@ -2,7 +2,6 @@
 
 # build docker image and push to AWS ECR
 # andrew@openmarmot.com
-# last update : Oct 2024
 # note - create the ECR repo in the Amazon console before running
 
 set -e
@@ -10,7 +9,7 @@ set -e
 # -- variables --
 #aws account number
 aws_account="$(aws sts get-caller-identity --query Account --output text)"
-aws_region="us-west-2"
+aws_region="$(aws configure get region)"
 container_name="messageboard"
 container_tag=$(date +%b-%d-%Y-%k-%M)
 
